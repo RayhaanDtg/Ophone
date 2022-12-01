@@ -32,7 +32,12 @@ class _ProductCardState extends State<ProductCard> {
             Container(
               width: 200,
               height: 175,
-              color: Colors.greenAccent.withOpacity(0.8),
+              //color: Colors.greenAccent.withOpacity(0.8),
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage('images/sample samsung.jpg'),
+                      fit: BoxFit.cover),
+                  borderRadius: BorderRadius.circular(8.0)),
             ),
             SizedBox(
               height: 10.0,

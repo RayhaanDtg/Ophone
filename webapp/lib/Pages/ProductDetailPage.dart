@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:webapp/Components/ProductDetail/ProductDetailDetails.dart';
+import 'package:webapp/Components/ProductDetail/ProductDetailImages.dart';
 
 import '../Components/DrawerHome.dart';
 import '../Components/DropDownCategory.dart';
@@ -29,137 +31,58 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
               height: 25.0,
             ),
             Container(
-                height: MediaQuery.of(context).size.height * 1,
-                //color: Colors.purpleAccent,
-                padding: EdgeInsets.all(10.0),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Row(
+              height: MediaQuery.of(context).size.height * 0.5,
+              //color: Colors.purpleAccent,
+              padding: EdgeInsets.all(0.0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ProductDetailImage(),
+                  SizedBox(width: 50.0),
+                  ProductDetailDetails(),
+                ],
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Material(
+                  elevation: 20,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        //color: Colors.indigoAccent,
+                        borderRadius: BorderRadius.circular(8.0)),
+                    height: 300,
+                    width: 550,
+                    padding: EdgeInsets.all(10.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Column(
-                          children: [
-                            Container(
-                                padding: EdgeInsets.all(5.0),
-                                height: 150,
-                                width: 150,
-                                color: Colors.blueAccent),
-                            SizedBox(height: 10.0),
-                            Container(
-                                padding: EdgeInsets.all(5.0),
-                                height: 150,
-                                width: 150,
-                                color: Colors.blueAccent),
-                            SizedBox(height: 10.0),
-                            Container(
-                                padding: EdgeInsets.all(5.0),
-                                height: 150,
-                                width: 150,
-                                color: Colors.blueAccent)
-                          ],
-                        ),
-                        SizedBox(width: 15.0),
-                        Column(
-                          children: [
-                            Container(
-                                height: 475,
-                                width: 300,
-                                padding: EdgeInsets.all(5.0),
-                                color: Colors.blueAccent)
-                          ],
-                        ),
-                      ],
-                    ),
-                    SizedBox(width: 50.0),
-                    Container(
-                      height: 475,
-                      padding: EdgeInsets.all(5.0),
-                      color: Colors.pinkAccent,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Product Title",
-                            style: TextStyle(
-                                fontSize: 30.0, fontWeight: FontWeight.bold),
-                          ),
-                          SizedBox(height: 20.0),
-                          Column(
+                        Container(
+                          color: Colors.amberAccent,
+                          child: Row(
                             children: [
-                              Row(
-                                children: [
-                                  Text(
-                                    "Price ",
-                                    style: TextStyle(
-                                        fontSize: 15.0,
-                                        fontStyle: FontStyle.italic),
-                                  ),
-                                  SizedBox(
-                                    width: 15.0,
-                                  ),
-                                  Text(
-                                    "250 CAD",
-                                    style: TextStyle(
-                                        fontSize: 15.0,
-                                        fontStyle: FontStyle.italic),
-                                  ),
-                                ],
-                              ),
-
-                              SizedBox(height: 15.0),
-                              //SizedBox(height: 10.0),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Icon(Icons.star),
-                                  Icon(Icons.star),
-                                  Icon(Icons.star),
-                                  Icon(Icons.star),
-                                  Icon(Icons.star),
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    "Quantity",
-                                    style: TextStyle(
-                                        fontSize: 15.0,
-                                        fontStyle: FontStyle.italic),
-                                  ),
-                                  SizedBox(
-                                    width: 15.0,
-                                  ),
-                                  DropdownButton<String>(
-                                    value: dropdownValue,
-                                    elevation: 10,
-                                    style: const TextStyle(color: Colors.black),
-                                    onChanged: (String? value) {
-                                      // This is called when the user selects an item.
-                                    },
-                                    items: qty.map<DropdownMenuItem<String>>(
-                                        (String value) {
-                                      return DropdownMenuItem<String>(
-                                        value: value,
-                                        child: Text(value),
-                                      );
-                                    }).toList(),
-                                  ),
-                                ],
+                              Text(
+                                "Product Description",
+                                style: TextStyle(
+                                    fontSize: 30.0,
+                                    fontWeight: FontWeight.bold),
                               ),
                             ],
                           ),
-                          SizedBox(
-                            height: 30.0,
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                )),
+                        ),
+                        SizedBox(
+                          height: 15.0,
+                        ),
+                        Text('Example of description')
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 25.0),
             Footer()
           ],
         )));
