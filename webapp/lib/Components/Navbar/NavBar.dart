@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:find_dropdown/find_dropdown.dart';
-import 'package:webapp/Components/Navbar/NavDropDown.dart';
+import 'package:webapp/Components/Navbar/NavItem.dart';
 
 class NavBar extends StatefulWidget implements PreferredSizeWidget {
   const NavBar({super.key});
@@ -50,7 +50,7 @@ class _NavBarState extends State<NavBar> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      const NavDropDown(
+                      const NavItem(
                         icon: Icon(Icons.headphones,
                             color: Colors.black, size: 25.0),
                       ),
@@ -59,7 +59,7 @@ class _NavBarState extends State<NavBar> {
                   ),
                   Row(
                     children: [
-                      NavDropDown(
+                      NavItem(
                         icon: Icon(Icons.phone_android,
                             color: Colors.black, size: 25.0),
                       ),
@@ -103,7 +103,7 @@ class _NavBarState extends State<NavBar> {
                           filled: true,
                           contentPadding: EdgeInsets.only(
                               bottom: 10.0, left: 10.0, right: 10.0),
-                          labelText: 'Search Product'),
+                          labelText: 'Search '),
                     ),
                   ),
                 ],

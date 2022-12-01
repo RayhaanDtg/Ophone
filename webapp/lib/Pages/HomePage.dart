@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:webapp/Components/CategoryWidget/CategoryWidget.dart';
 import 'package:webapp/Components/DrawerHome.dart';
 import 'package:webapp/Components/FeaturedCarousel.dart';
 import 'package:webapp/Components/Navbar/NavBar.dart';
@@ -45,9 +46,9 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Container(
                   color: Colors.redAccent,
-                  padding: EdgeInsets.all(2.0),
+                  padding: EdgeInsets.all(10.0),
                   height: 350,
-                  width: MediaQuery.of(context).size.width * 0.50,
+                  width: MediaQuery.of(context).size.width * 0.70,
                   child: ListView.separated(
                       separatorBuilder: (context, index) => SizedBox(
                             width: 20.0,
@@ -81,17 +82,13 @@ class _MyHomePageState extends State<MyHomePage> {
               color: Colors.orangeAccent,
             ),
             SizedBox(height: 5.0),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [DropdownCategory()],
-            ),
             const SizedBox(
               height: 50,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                GridViewHome(),
+                CategoryWidget(),
               ],
             ),
             const SizedBox(height: 50),

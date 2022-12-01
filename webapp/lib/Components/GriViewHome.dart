@@ -12,9 +12,10 @@ class GridViewHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.amberAccent,
-      height: MediaQuery.of(context).size.height * 0.80,
-      width: MediaQuery.of(context).size.width * 0.50,
-      margin: EdgeInsets.only(bottom: 5.0),
+      height: MediaQuery.of(context).size.height,
+      width: MediaQuery.of(context).size.width * 0.70,
+      margin: EdgeInsets.only(bottom: 10.0),
+      padding: EdgeInsets.all(5.0),
       child: Scrollbar(
           thumbVisibility: true,
           child: ListView.separated(
@@ -24,7 +25,7 @@ class GridViewHome extends StatelessWidget {
             itemBuilder: (BuildContext context, int index) {
               return Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [ProductCard(), ProductCard()],
+                children: [ProductCard(), ProductCard(), ProductCard()],
               );
             },
           )

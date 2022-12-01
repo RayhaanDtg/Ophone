@@ -55,7 +55,7 @@ class __DropdownCategoryState extends State<DropdownCategory> {
               // clearOption:true;
               contentPadding:
                   EdgeInsets.only(bottom: 10.0, left: 10.0, right: 10.0),
-              labelText: 'Product Category'),
+              labelText: 'Search Product '),
           clearOption: true,
           dropDownList: _currencies,
           onChanged: (val) {},
