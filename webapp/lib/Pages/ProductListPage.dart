@@ -41,9 +41,12 @@ class _ProductListPageState extends State<ProductListPage> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Filter by'),
+                        DropdownCategory(),
                         SizedBox(width: 30.0),
-                        Text('Sort by')
+                        IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.sort,
+                                color: Colors.black, size: 25.0))
                       ],
                     ),
                   ),
@@ -53,10 +56,10 @@ class _ProductListPageState extends State<ProductListPage> {
             const SizedBox(
               height: 20,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [DropdownCategory()],
-            ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children: [DropdownCategory()],
+            // ),
             SizedBox(
               height: 15.0,
             ),

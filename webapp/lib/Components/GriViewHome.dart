@@ -10,27 +10,29 @@ class GridViewHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.amber.shade100,
-      //height: MediaQuery.of(context).size.height,
-      width: MediaQuery.of(context).size.width * 0.70,
-      margin: EdgeInsets.only(bottom: 10.0),
-      padding: EdgeInsets.all(5.0),
-      child: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: GridView.builder(
-          itemCount: 20,
-          physics: NeverScrollableScrollPhysics(),
-          shrinkWrap: true,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 4,
-            childAspectRatio: 1.0,
-            mainAxisSpacing: 15.0,
-            crossAxisSpacing: 20.0,
+    return Expanded(
+      child: Container(
+        color: Colors.amber.shade100,
+        //height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width * 0.70,
+        margin: EdgeInsets.only(bottom: 10.0),
+        padding: EdgeInsets.all(5.0),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: GridView.builder(
+            itemCount: 20,
+            physics: NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 4,
+              childAspectRatio: 4 / 3,
+              mainAxisSpacing: 20.0,
+              crossAxisSpacing: 20.0,
+            ),
+            itemBuilder: (BuildContext context, int index) {
+              return ProductCard();
+            },
           ),
-          itemBuilder: (BuildContext context, int index) {
-            return ProductCard();
-          },
         ),
       ),
     );

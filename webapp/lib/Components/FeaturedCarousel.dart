@@ -23,9 +23,9 @@ class FeaturedCarousel extends StatelessWidget {
                 border: Border.all(
                   color: Colors.white,
                 )),
-            child: Center(
-                child: Text(index.toString(),
-                    style: TextStyle(color: Colors.black, fontSize: 18))),
+            // child: Center(
+            //     child: Text(index.toString(),
+            //         style: TextStyle(color: Colors.black, fontSize: 18))),
           );
         },
         options: CarouselOptions(

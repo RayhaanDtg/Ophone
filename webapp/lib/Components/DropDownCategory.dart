@@ -11,11 +11,11 @@ class DropdownCategory extends StatefulWidget {
 class __DropdownCategoryState extends State<DropdownCategory> {
   late SingleValueDropDownController _cnt;
   final List<DropDownValueModel> _currencies = const [
-    DropDownValueModel(name: "Food", value: "Food"),
-    DropDownValueModel(name: "Transport", value: "Transport"),
-    DropDownValueModel(name: "Electronics", value: "Food"),
-    DropDownValueModel(name: "Clothing", value: "Clothing"),
-    DropDownValueModel(name: "Books", value: "Books"),
+    DropDownValueModel(name: "Samsung", value: "Samsung"),
+    DropDownValueModel(name: "Apple", value: "Apple"),
+    DropDownValueModel(name: "Motorolla", value: "Motorolla"),
+    DropDownValueModel(name: "LG", value: "LG"),
+    // DropDownValueModel(name: "Books", value: "Books"),
   ];
   String _currentSelectedValue = '';
 
@@ -28,7 +28,7 @@ class __DropdownCategoryState extends State<DropdownCategory> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: MediaQuery.of(context).size.width * 0.65,
+        width: 200,
         height: 35,
         margin: const EdgeInsets.fromLTRB(8.0, 4.0, 8.0, 4.0),
         decoration: BoxDecoration(
@@ -55,7 +55,7 @@ class __DropdownCategoryState extends State<DropdownCategory> {
               // clearOption:true;
               contentPadding:
                   EdgeInsets.only(bottom: 10.0, left: 10.0, right: 10.0),
-              labelText: 'Search Product '),
+              labelText: 'Filter Brand'),
           clearOption: true,
           dropDownList: _currencies,
           onChanged: (val) {},

@@ -9,7 +9,7 @@ class CategoryWidget extends StatelessWidget {
     return Container(
       color: Colors.orangeAccent.shade100.withOpacity(0.5),
       padding: EdgeInsets.all(10.0),
-      height: MediaQuery.of(context).size.height * 1.15,
+      height: 1050,
       width: MediaQuery.of(context).size.width * 0.70,
       margin: EdgeInsets.only(bottom: 5.0),
       child: Column(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:find_dropdown/find_dropdown.dart';
 import 'package:webapp/Components/Navbar/NavItem.dart';
+import 'package:webapp/Pages/CartPage.dart';
 
 class NavBar extends StatefulWidget implements PreferredSizeWidget {
   const NavBar({super.key});
@@ -69,7 +70,13 @@ class _NavBarState extends State<NavBar> {
                   Row(
                     children: [
                       IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const CartPage()),
+                            );
+                          },
                           icon: const Icon(Icons.shopping_cart,
                               color: Colors.black, size: 25.0)),
                       Text('Cart')
