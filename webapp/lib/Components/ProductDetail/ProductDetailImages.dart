@@ -15,28 +15,34 @@ class _ProductDetailImageState extends State<ProductDetailImage> {
         Column(
           children: [
             Container(
-                padding: EdgeInsets.all(5.0),
-                height: 115,
-                width: 125,
-                color: Colors.blueAccent),
+              padding: EdgeInsets.all(5.0),
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("images/sample samsung.jpg"),
+                      fit: BoxFit.contain)),
+              height: 115,
+              width: 125,
+            ),
             SizedBox(height: 7.5),
             Container(
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("images/sample samsung.jpg"),
+                      fit: BoxFit.contain)),
               padding: EdgeInsets.all(5.0),
               height: 115,
               width: 125,
-              color: Colors.blueAccent,
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: NetworkImage(
-                          "https://images.unsplash.com/photo-1579202673506-ca3ce28943ef"),
-                      fit: BoxFit.cover)),
             ),
             SizedBox(height: 7.50),
             Container(
-                padding: EdgeInsets.all(5.0),
-                height: 115,
-                width: 125,
-                color: Colors.blueAccent)
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("images/sample samsung.jpg"),
+                      fit: BoxFit.contain)),
+              padding: EdgeInsets.all(5.0),
+              height: 115,
+              width: 125,
+            )
           ],
         ),
         SizedBox(width: 15.0),
@@ -46,7 +52,10 @@ class _ProductDetailImageState extends State<ProductDetailImage> {
                 height: 365,
                 width: 300,
                 padding: EdgeInsets.all(5.0),
-                color: Colors.blueAccent)
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage("images/sample samsung.jpg"),
+                        fit: BoxFit.contain)))
           ],
         ),
       ],

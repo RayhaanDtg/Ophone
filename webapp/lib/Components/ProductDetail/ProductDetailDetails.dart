@@ -16,41 +16,63 @@ class _ProductDetailDetailsState extends State<ProductDetailDetails> {
     return Material(
       elevation: 20,
       child: Container(
+        width: 250,
         height: 365,
         padding: EdgeInsets.all(5.0),
         //color: Colors.pinkAccent,
         child: Column(
-          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Product Title",
+                  "Samsung A71 5G ",
                   style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
                   height: 15.0,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Icon(Icons.star),
-                    Icon(Icons.star),
-                    Icon(Icons.star),
-                    Icon(Icons.star),
-                    Icon(Icons.star),
+                    Icon(
+                      Icons.star,
+                      // color: Colors.black,
+                      size: 15.0,
+                    ),
+                    Icon(
+                      Icons.star,
+                      // color: Colors.black,
+                      size: 15.0,
+                    ),
+                    Icon(
+                      Icons.star,
+                      // color: Colors.black,
+                      size: 15.0,
+                    ),
+                    Icon(
+                      Icons.star,
+                      // color: Colors.black,
+                      size: 15.0,
+                    ),
+                    Icon(
+                      Icons.star,
+                      // color: Colors.black,
+                      size: 15.0,
+                    ),
                   ],
                 ),
               ],
             ),
-            SizedBox(height: 75.0),
+            SizedBox(height: 30.0),
             Column(
               children: [
                 SizedBox(
                   height: 15.0,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  //mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Text(
                       "Price ",
@@ -72,7 +94,7 @@ class _ProductDetailDetailsState extends State<ProductDetailDetails> {
                 //SizedBox(height: 10.0),
 
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       "Quantity",
@@ -99,14 +121,14 @@ class _ProductDetailDetailsState extends State<ProductDetailDetails> {
                   ],
                 ),
                 SizedBox(
-                  height: 15.0,
+                  height: 50.0,
                 ),
               ],
             ),
             ElevatedButton(onPressed: () {}, child: Text('Add to cart')),
-            SizedBox(
-              height: 50.0,
-            )
+            // SizedBox(
+            //   height: 10.0,
+            // )
           ],
         ),
       ),

@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  color: Colors.redAccent,
+                  color: Colors.orangeAccent.shade100.withOpacity(0.5),
                   padding: EdgeInsets.all(10.0),
                   height: 350,
                   width: MediaQuery.of(context).size.width * 0.70,

@@ -25,14 +25,14 @@ class _ProductListPageState extends State<ProductListPage> {
             SizedBox(height: 25.0),
             Container(
               height: 50.0,
-              color: Color.fromARGB(255, 190, 224, 241),
+              color: Colors.amberAccent.shade100,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                       padding: EdgeInsets.fromLTRB(20.0, 0, 0, 0),
                       child: Text(
-                        'Brand',
+                        'Phones',
                         style: TextStyle(
                             fontSize: 30.0, fontWeight: FontWeight.bold),
                       )),
