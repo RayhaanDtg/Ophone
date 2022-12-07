@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:webapp/Components/ProductCounter.dart';
 
 class CartItem extends StatefulWidget {
   const CartItem({super.key});
@@ -11,34 +12,40 @@ class _CartItemState extends State<CartItem> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Card(
-        child: ListTile(
-          leading: Container(
-            height: 50,
-            width: 50,
+      color: Colors.white,
+      height: 100,
+      width: MediaQuery.of(context).size.width * 0.75,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            height: 75,
+            width: 75,
             decoration: BoxDecoration(
               image: DecorationImage(
                   image: AssetImage('images/sample samsung.jpg'),
                   fit: BoxFit.contain),
             ),
           ),
-          title: Text('Samsung A71'),
-          subtitle: Text('359.99 CAD'),
-          trailing: Container(
-            height: 25,
-            width: 100,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  primary: Colors.red,
-                  //padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-                  textStyle:
-                      TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
-              onPressed: () {},
-              child: Text('Remove'),
-            ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Samsung A71'),
+              SizedBox(
+                height: 5.0,
+              ),
+              Text('\$399.99')
+            ],
           ),
-          isThreeLine: true,
-        ),
+          ProductCounter(),
+          IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.delete,
+                size: 20.0,
+              ))
+        ],
       ),
     );
   }

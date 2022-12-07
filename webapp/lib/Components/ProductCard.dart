@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:webapp/Pages/ProductDetailPage.dart';
+import 'package:webapp/Pages/ProductListPage.dart';
 
 class ProductCard extends StatefulWidget {
   const ProductCard({super.key});

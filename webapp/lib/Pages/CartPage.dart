@@ -45,6 +45,45 @@ class _CartPageState extends State<CartPage> {
           ],
         ),
         SizedBox(height: 40.0),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Material(
+              elevation: 10.0,
+              child: Container(
+                color: Colors.amberAccent.withOpacity(0.3),
+                height: 150.0,
+                width: MediaQuery.of(context).size.width * 0.50,
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [Text('Subtotal'), Text('\$999.99')],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [Text('Delivery fee'), Text('\$9.99')],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [Text('Total'), Text('\$1200')],
+                      ),
+                      ElevatedButton(onPressed: () {}, child: Text('Checkout'))
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 70,
+        ),
         Footer()
       ])),
     );

@@ -43,6 +43,7 @@ dependencies:
   multilevel_drawer: ^2.0.0
   find_dropdown: ^1.0.0
   dropdown_button2: ^1.9.1
+  flutter_layout_grid: ^2.0.1
 
 dev_dependencies:
   flutter_test:

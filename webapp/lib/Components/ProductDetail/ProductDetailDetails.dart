@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:webapp/Components/ProductCounter.dart';
 
 List<String> qty = ['0', '1', '2', '3'];
 
@@ -92,34 +93,34 @@ class _ProductDetailDetailsState extends State<ProductDetailDetails> {
 
                 SizedBox(height: 15.0),
                 //SizedBox(height: 10.0),
-
-                Row(
-                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Quantity",
-                      style: TextStyle(
-                          fontSize: 15.0, fontStyle: FontStyle.italic),
-                    ),
-                    SizedBox(
-                      width: 45.0,
-                    ),
-                    DropdownButton<String>(
-                      value: dropdownValue,
-                      elevation: 10,
-                      style: const TextStyle(color: Colors.black),
-                      onChanged: (String? value) {
-                        // This is called when the user selects an item.
-                      },
-                      items: qty.map<DropdownMenuItem<String>>((String value) {
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Text(value),
-                        );
-                      }).toList(),
-                    ),
-                  ],
-                ),
+                const ProductCounter(),
+                // Row(
+                //   // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //   children: [
+                //     Text(
+                //       "Quantity",
+                //       style: TextStyle(
+                //           fontSize: 15.0, fontStyle: FontStyle.italic),
+                //     ),
+                //     SizedBox(
+                //       width: 45.0,
+                //     ),
+                //     DropdownButton<String>(
+                //       value: dropdownValue,
+                //       elevation: 10,
+                //       style: const TextStyle(color: Colors.black),
+                //       onChanged: (String? value) {
+                //         // This is called when the user selects an item.
+                //       },
+                //       items: qty.map<DropdownMenuItem<String>>((String value) {
+                //         return DropdownMenuItem<String>(
+                //           value: value,
+                //           child: Text(value),
+                //         );
+                //       }).toList(),
+                //     ),
+                //   ],
+                // ),
                 SizedBox(
                   height: 50.0,
                 ),
