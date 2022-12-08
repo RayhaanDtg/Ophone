@@ -3,6 +3,7 @@ import 'package:webapp/Components/Cart/Cart.dart';
 import 'package:webapp/Components/DrawerHome.dart';
 import 'package:webapp/Components/Footer.dart';
 import 'package:webapp/Components/Navbar/NavBar.dart';
+import 'package:webapp/Pages/CheckoutPage.dart';
 
 class CartPage extends StatefulWidget {
   const CartPage({super.key});
@@ -73,7 +74,15 @@ class _CartPageState extends State<CartPage> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [Text('Total'), Text('\$1200')],
                       ),
-                      ElevatedButton(onPressed: () {}, child: Text('Checkout'))
+                      ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const CheckoutPage()),
+                            );
+                          },
+                          child: Text('Checkout'))
                     ],
                   ),
                 ),
