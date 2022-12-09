@@ -53,9 +53,9 @@ class _CheckoutPageState extends State<CheckoutPage> {
                   Column(
                     children: [
                       Container(
-                          width: MediaQuery.of(context).size.height * 0.25,
+                          width: MediaQuery.of(context).size.height * 0.35,
                           height: MediaQuery.of(context).size.height * 0.65,
-                          child: OrderSummary()),
+                          child: const OrderSummary()),
                     ],
                   ),
                   ElevatedButton(onPressed: () {}, child: Text('Place Order')),

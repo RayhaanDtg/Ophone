@@ -69,21 +69,42 @@ class _OrderSummaryState extends State<OrderSummary> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             // crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [Text('Subtotal'), Text('\$299.99')]),
+              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                Text(
+                  'Subtotal',
+                  style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w500),
+                ),
+                Text(
+                  '\$299.99',
+                  style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.w500),
+                )
+              ]),
               SizedBox(
                 height: 15.0,
               ),
-              Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [Text('Delivery Fee'), Text('\$9.99')]),
+              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                Text(
+                  'Delivery Fee',
+                  style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w500),
+                ),
+                Text(
+                  '\$9.99',
+                  style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.w500),
+                )
+              ]),
               SizedBox(
                 height: 15.0,
               ),
-              Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [Text('Total'), Text('\$399.99')]),
+              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                Text(
+                  'Total',
+                  style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w500),
+                ),
+                Text(
+                  '\$399.99',
+                  style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.w500),
+                )
+              ]),
             ],
           ),
         ),

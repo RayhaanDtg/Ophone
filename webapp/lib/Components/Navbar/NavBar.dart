@@ -41,7 +41,7 @@ class _NavBarState extends State<NavBar> {
             ],
           ),
           Container(
-              width: 700,
+              width: MediaQuery.of(context).size.width * 0.45,
               color: Colors.amberAccent,
               padding: EdgeInsets.all(3.0),
               height: 100,
@@ -84,7 +84,7 @@ class _NavBarState extends State<NavBar> {
                   ),
                   Container(
                     height: 35,
-                    width: 300,
+                    width: MediaQuery.of(context).size.width * 0.25,
                     margin: const EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 0.0),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8.0),
