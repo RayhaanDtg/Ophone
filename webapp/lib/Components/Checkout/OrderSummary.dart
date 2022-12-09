@@ -22,6 +22,7 @@ class _OrderSummaryState extends State<OrderSummary> {
             child: Container(
               color: Colors.amberAccent.shade200.withOpacity(0.3),
               height: MediaQuery.of(context).size.height * 0.40,
+              width: MediaQuery.of(context).size.width * 0.35,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
